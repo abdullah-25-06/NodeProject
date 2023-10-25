@@ -20,6 +20,9 @@ const UserSchema = new mongoose.Schema(
     token:{
       type:String
     },
+    avatar:{
+      type:Buffer
+    }
   },
   {
     timestamps: true,

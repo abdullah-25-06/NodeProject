@@ -2,6 +2,7 @@ const CustomErrorApi = require("../error/error");
 const { verify } = require("../utils/jwt");
 const asyncHandler = require("express-async-handler");
 const User = require("../model/user");
+
 const Auth = asyncHandler(async (req, res, next) => {
   const token = req.header("Authorization").replace("Bearer ", "");
   const decode = verify(token);
